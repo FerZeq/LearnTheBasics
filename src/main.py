@@ -1,7 +1,8 @@
-
+from algs.algs import Algorithms
 
 def main() -> None:
-    print("Hello World")
+    hello = Algorithms()
+    hello.hello_world()
 
 if __name__ == '__main__':
     main()
