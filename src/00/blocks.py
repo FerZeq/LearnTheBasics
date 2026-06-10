@@ -1,6 +1,7 @@
 import sys
 
 def check_string(blck_string):
+    return_string = None
     if len(blck_string) == 33:
         i = 0
         while i < 5:
