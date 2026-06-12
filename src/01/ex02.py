@@ -1,3 +1,8 @@
+def burglar_alarm(func):
+    print("squeak")
+    return func
+
+@burglar_alarm
 def add_ingot(purse: dict[str, int]) -> dict[str, int]:
     final: dict[str, int] = {}
     if ("gold_ingots" not in purse) or (purse["gold_ingots"] + 1 < 0):
@@ -7,6 +12,7 @@ def add_ingot(purse: dict[str, int]) -> dict[str, int]:
 
     return final
 
+@burglar_alarm
 def get_ingot(purse: dict[str, int]) -> dict[str, int]:
     final: dict[str, int] = {}
     if ("gold_ingots" in purse) or (purse["gold_ingots"] > 1):
@@ -14,6 +20,7 @@ def get_ingot(purse: dict[str, int]) -> dict[str, int]:
 
     return final
 
+@burglar_alarm
 def empty(purse: dict[str, int]) -> dict[str, int]:
     final: dict[str, int] = {}
     if ("gold_ingots" in purse) and (purse["gold_ingots"] > 0):
